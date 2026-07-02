@@ -63,6 +63,7 @@ nav:
       - Overview: 09-standards/index.md
   - ADR:
       - Overview: 10-adr/index.md
+      - ADR-003 Document-Based Amendment Strategy: 10-adr/ADR-003-document-based-amendment-strategy.md
   - Reference:
       - Overview: 11-reference/index.md
       - REF-001 Order Domain Discovery: 11-reference/REF-001-order-domain-discovery.md
