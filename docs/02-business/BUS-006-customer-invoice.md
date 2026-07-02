@@ -14,15 +14,17 @@
 
 This document defines Customer Invoice behavior in Travel MidOffice.
 
-A Customer Invoice is the billing document generated from an Order and synchronized to Odoo for accounting.
+A Customer Invoice is the customer billing document generated from an Order and synchronized to Odoo for accounting.
 
 ---
 
-## 2. Business Rule
+## 2. Business Rules
 
-Current design: one Order generates one Customer Invoice.
-
-The Customer Invoice consolidates customer-facing charges from all Product Lines in the Order.
+| Rule ID | Rule |
+|---|---|
+| BR-INV-001 | One Order shall generate one Customer Invoice. |
+| BR-INV-002 | Customer billing is consolidated at Order level even when the Order has multiple product lines. |
+| BR-INV-003 | Posted or synchronized Customer Invoices shall not be edited directly for commercial changes. |
 
 ---
 
@@ -33,21 +35,29 @@ Order Confirmed
   -> Customer Invoice Generated
   -> Odoo Sync Requested
   -> Odoo Sync Completed
-  -> Payment / Reconciliation in Odoo
+  -> Payment / Accounting Handling in Odoo
 ```
 
 ---
 
-## 4. Ownership
+## 4. Odoo Responsibility
 
-Travel MidOffice owns invoice preparation and operational linkage.
+Travel MidOffice prepares and sends the Customer Invoice.
 
-Odoo owns accounting receivables, payment, reconciliation, and journal impact.
+Odoo owns accounting treatment, receivables, journal entries, tax posting, payment, and reconciliation.
 
 ---
 
 ## 5. Amendment
 
-A posted or synchronized Customer Invoice should not be edited directly for commercial changes.
+If a Customer Invoice must be corrected after invoicing or Odoo synchronization, the correction should use Full Credit Note and Re-Invoice.
 
-Corrections should use Full Credit Note and Re-Invoice.
+---
+
+## 6. Related Documents
+
+- BUS-005 Order Management
+- BUS-008 Full Credit Note
+- BUS-009 Re-Invoice
+- ADR-002 Odoo Accounting System of Record
+- ADR-003 Document-Based Amendment Strategy

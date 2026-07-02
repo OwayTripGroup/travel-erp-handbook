@@ -12,44 +12,29 @@
 
 ## 1. Purpose
 
-This document defines the Commercial Transaction concept.
+This document defines Commercial Transaction as the highest-level business concept in the Travel MidOffice domain.
 
-A Commercial Transaction is the top-level business concept that represents the commercial agreement between Oway Travel and a Customer.
+A Commercial Transaction represents the commercial agreement between Oway Travel and a Customer to purchase one or more travel products or services.
 
 ---
 
 ## 2. Business Definition
 
-A Commercial Transaction begins when the Customer commits to purchase or when the business commits to fulfill the purchase.
+A Commercial Transaction begins when the Customer commits to purchase, or when Oway Travel commits to fulfill the purchase.
 
-Travel MidOffice receives the Commercial Transaction and creates an operational Order to process it.
-
----
-
-## 3. Relationship to Order
-
-The Order is the operational representation of the Commercial Transaction.
+The Order is the operational representation of the Commercial Transaction inside Travel MidOffice.
 
 ```text
 Commercial Transaction
   -> Order
   -> Customer Invoice
   -> Vendor Bill
-  -> Full Credit Note
-  -> Re-Invoice
+  -> Amendment if required
 ```
 
 ---
 
-## 4. Ownership
-
-Travel MidOffice owns the Commercial Transaction once it is received from a source system.
-
-Source systems are producers, not operational owners.
-
----
-
-## 5. Source Systems
+## 3. Source Systems
 
 Commercial Transactions may originate from:
 
@@ -57,12 +42,95 @@ Commercial Transactions may originate from:
 - Oway Travel Mobile App
 - Sales Operation
 - Amadeus
+- Manual MidOffice entry
 - Future partner systems
+
+Source systems create or send Commercial Transactions, but Travel MidOffice becomes the operational owner once the transaction is received.
 
 ---
 
-## 6. Architecture Notes
+## 4. Ownership
 
-Commercial Transaction is a business architecture concept. It does not require a new database table immediately.
+| Area | Owner |
+|---|---|
+| Commercial agreement | Sales / Online Platform |
+| Operational ownership after receipt | Travel MidOffice |
+| Accounting records | Odoo |
+| Reporting | Travel MidOffice / Power BI |
 
-It provides a stable parent concept for Order, Invoice, Vendor Bill, Credit Note, Re-Invoice, reporting, and audit.
+---
+
+## 5. Lifecycle
+
+```text
+Customer Commits
+  -> Commercial Transaction Created
+  -> Travel MidOffice Receives Transaction
+  -> Draft Order Created
+  -> Order Validated
+  -> Order Confirmed
+  -> Financial Documents Generated
+  -> Odoo Synchronization
+  -> Reporting and Audit
+```
+
+---
+
+## 6. Relationship to Order
+
+The Order is not the same as the Commercial Transaction.
+
+The Commercial Transaction is the business concept.
+
+The Order is the operational object used by Travel MidOffice to validate, confirm, invoice, bill vendors, amend, and report the transaction.
+
+This distinction allows the handbook to remain stable even if implementation evolves.
+
+---
+
+## 7. Amendment Relationship
+
+Commercial changes after confirmation or invoicing are handled through document-based amendment.
+
+```text
+Original Commercial Transaction
+  -> Original Order
+  -> Full Credit Note
+  -> Re-Invoice Order
+```
+
+The amendment chain preserves the history of the original transaction and its corrections.
+
+---
+
+## 8. Business Rules
+
+| Rule ID | Rule |
+|---|---|
+| BR-INT-001 | Travel MidOffice is the operational system of record after transaction receipt. |
+| BR-ORD-001 | Every Order must belong to exactly one Customer. |
+| BR-AMD-003 | Amendment chains must preserve relationships between original and replacement documents. |
+
+---
+
+## 9. Reporting Requirements
+
+Reporting must support:
+
+- Original commercial value
+- Credit impact
+- Re-invoice value
+- Final net outcome
+- Full amendment chain profitability
+
+---
+
+## 10. Related Documents
+
+- GOV-002 Domain Dictionary
+- GOV-003 Business Capability Map
+- GOV-004 Business Event Catalog
+- GOV-005 Business Rules Catalog
+- BUS-005 Order Management
+- ADR-001 Travel MidOffice Operational System of Record
+- ADR-003 Document-Based Amendment Strategy

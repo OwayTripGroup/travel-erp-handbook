@@ -1,0 +1,86 @@
+site_name: Travel ERP Enterprise Architecture Handbook
+site_description: Official architecture handbook for the Travel ERP System
+site_author: ERP Architecture Team
+repo_name: OwayTripGroup/travel-erp-handbook
+repo_url: https://github.com/OwayTripGroup/travel-erp-handbook
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+nav:
+  - Home: index.md
+  - Governance:
+      - Overview: 00-governance/index.md
+      - GOV-001 Documentation Standard: 00-governance/GOV-001-documentation-standard.md
+      - GOV-002 Domain Dictionary: 00-governance/GOV-002-domain-dictionary.md
+      - GOV-003 Business Capability Map: 00-governance/GOV-003-business-capability-map.md
+      - GOV-004 Business Event Catalog: 00-governance/GOV-004-business-event-catalog.md
+      - GOV-005 Business Rules Catalog: 00-governance/GOV-005-business-rules-catalog.md
+  - Architecture:
+      - Overview: 01-architecture/index.md
+      - ARC-000 Design Principles: 01-architecture/ARC-000-design-principles.md
+  - Business:
+      - Overview: 02-business/index.md
+      - BUS-000 Travel ERP Business Overview: 02-business/BUS-000-travel-erp-business-overview.md
+      - BUS-001 Customer Management: 02-business/BUS-001-customer-management.md
+      - BUS-002 Vendor Management: 02-business/BUS-002-vendor-management.md
+      - BUS-003 Product Management: 02-business/BUS-003-product-management.md
+      - BUS-004 Commercial Transaction: 02-business/BUS-004-commercial-transaction.md
+      - BUS-005 Order Management: 02-business/BUS-005-order-management.md
+      - BUS-006 Customer Invoice: 02-business/BUS-006-customer-invoice.md
+      - BUS-007 Vendor Bill: 02-business/BUS-007-vendor-bill.md
+      - BUS-008 Full Credit Note: 02-business/BUS-008-full-credit-note.md
+      - BUS-009 Re-Invoice: 02-business/BUS-009-re-invoice.md
+  - Accounting:
+      - Overview: 03-accounting/index.md
+  - Integration:
+      - Overview: 04-integration/index.md
+  - Data:
+      - Overview: 05-data/index.md
+  - API:
+      - Overview: 06-api/index.md
+  - Frontend:
+      - Overview: 07-frontend/index.md
+  - Operations:
+      - Overview: 08-operations/index.md
+  - Standards:
+      - Overview: 09-standards/index.md
+  - ADR:
+      - Overview: 10-adr/index.md
+      - ADR-001 Travel MidOffice Operational System of Record: 10-adr/ADR-001-travel-midoffice-operational-system-of-record.md
+      - ADR-002 Odoo Accounting System of Record: 10-adr/ADR-002-odoo-accounting-system-of-record.md
+      - ADR-003 Document-Based Amendment Strategy: 10-adr/ADR-003-document-based-amendment-strategy.md
+  - Reference:
+      - Overview: 11-reference/index.md
+      - REF-001 Order Domain Discovery: 11-reference/REF-001-order-domain-discovery.md
+  - Requirements:
+      - Overview: 12-requirements/index.md

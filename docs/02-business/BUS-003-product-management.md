@@ -14,13 +14,15 @@
 
 This document defines the Product Management domain for Travel MidOffice.
 
-Product Management ensures that travel products can be represented consistently inside Orders, financial documents, reporting, and integrations.
+Product Management ensures that travel products and product lines are consistently classified, configured, mapped to vendors, used in Orders, and reported across operational, financial, and integration workflows.
 
 ---
 
-## 2. Product Types
+## 2. Business Context
 
-Travel MidOffice supports multiple travel product types, including:
+A Product is a sellable travel service offered by Oway Travel.
+
+Supported product types include:
 
 - Flight
 - Hotel
@@ -29,46 +31,125 @@ Travel MidOffice supports multiple travel product types, including:
 - Visa
 - Car Rental
 - Tour
-- Future product types
+- Future travel products
 
-A single Order may contain multiple product types.
-
-Tour packages may include multiple Product Lines.
+A single Order may contain multiple Product Lines. This is especially important for tour packages and bundled travel transactions.
 
 ---
 
-## 3. Product Line
+## 3. Product vs Product Line
 
-A Product Line is a specific travel service within an Order.
+A Product is the reusable business category or service type.
 
-Each Product Line may have:
+A Product Line is the actual instance of that product within an Order.
 
-- Product type
-- Vendor
-- Cost
-- Selling price
-- Currency
-- Exchange rate
-- Tax
-- Operational details
-- Booking reference
-- Travel-specific attributes
+Example:
+
+```text
+Product Type: Flight
+
+Order Product Line:
+  Flight from Yangon to Bangkok
+  Vendor: Airline or consolidator
+  Selling Price: 500
+  Cost: 430
+```
 
 ---
 
-## 4. Business Rules
+## 4. Ownership
+
+| Area | Owner |
+|---|---|
+| Product category | Product Team |
+| Product operational usage | Operations |
+| Product selling policy | Sales / Online Platform |
+| Product vendor mapping | Operations |
+| Product analytics mapping | Product / Finance / Reporting |
+| Accounting mapping | Finance / Odoo |
+
+---
+
+## 5. Business Rules
 
 | Rule ID | Rule |
 |---|---|
 | BR-PRD-001 | A single Order may include different product types. |
 | BR-PRD-002 | Product lines may have their own vendor, cost, currency, exchange rate, and operational details. |
 | BR-PRD-003 | A single product type may involve more than one vendor where business scenarios require it. |
-| BR-PRD-004 | If one product line changes after invoicing, the preferred correction pattern is Full Credit Note and Re-Invoice. |
+| BR-PRD-004 | If one product line changes after invoicing, correction should use Full Credit Note and Re-Invoice rather than partial line editing in the current design. |
 
 ---
 
-## 5. Architecture Notes
+## 6. Product-Line Financial Attributes
 
-Products should be modeled flexibly enough to support future travel products without redesigning the Order domain.
+Each Product Line may carry:
 
-Product-specific details should be separated from shared Order and Product Line concepts.
+- Selling amount
+- Cost amount
+- Vendor
+- Currency
+- Exchange rate
+- Tax reference
+- Discount effect
+- Product analytics mapping
+
+This allows profitability and reporting to be calculated accurately even when one Order contains multiple products.
+
+---
+
+## 7. Vendor Relationship
+
+A Product Line may be linked to one or more vendors depending on the business scenario.
+
+Examples:
+
+- Flight sold through airline directly
+- Flight sold through consolidator
+- Hotel booked through hotel vendor
+- Insurance sold through insurance provider
+- Visa processed through visa agency
+
+Vendor Bill generation should use product-line cost and vendor grouping rules.
+
+---
+
+## 8. Reporting Requirements
+
+Product reporting should support:
+
+- Sales by product type
+- Profitability by product type
+- Vendor cost by product type
+- Product mix by source system
+- Product performance by team
+- Amendment impact by product type
+
+---
+
+## 9. Odoo Considerations
+
+Product information may be used for Odoo invoice lines, analytics, account mapping, or reporting references.
+
+Travel MidOffice owns operational product usage. Odoo owns accounting treatment.
+
+---
+
+## 10. Open Questions
+
+- Final product master data fields
+- Product analytics mapping rules
+- Whether product configuration should be fully dynamic
+- Whether product-level approval rules are required
+- Future supplier contract management
+
+---
+
+## 11. Related Documents
+
+- GOV-002 Domain Dictionary
+- GOV-005 Business Rules Catalog
+- BUS-004 Commercial Transaction
+- BUS-005 Order Management
+- BUS-007 Vendor Bill
+- ADR-002 Odoo Accounting System of Record

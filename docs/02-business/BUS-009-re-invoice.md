@@ -14,17 +14,37 @@
 
 This document defines the Re-Invoice workflow.
 
-A Re-Invoice creates a replacement Draft Order after a Full Credit Note so the revised Commercial Transaction can be processed through the normal lifecycle.
+Re-Invoice is the approved mechanism for replacing an original Order after a Full Credit Note.
 
 ---
 
-## 2. Workflow
+## 2. Business Definition
+
+A Re-Invoice always starts with a Full Credit Note.
+
+After the Full Credit Note, Travel MidOffice creates a new Draft Order copied from the original Order. Authorized users then make the required business changes and process the new Order through the normal lifecycle.
+
+---
+
+## 3. Business Rules
+
+| Rule ID | Rule |
+|---|---|
+| BR-RIN-001 | Re-Invoice shall always begin with Full Credit Note. |
+| BR-RIN-002 | Re-Invoice shall create a new Draft Order copied from the original Order. |
+| BR-RIN-003 | Authorized users shall manually update the copied Draft Order according to the amendment scenario. |
+| BR-RIN-004 | The Re-Invoice Order shall proceed through the normal Order lifecycle after manual changes. |
+| BR-RIN-005 | Re-Invoice Orders may themselves be amended again. |
+
+---
+
+## 4. Workflow
 
 ```text
 Original Order
   -> Full Credit Note
-  -> New Draft Order copied from original
-  -> Manual revision
+  -> New Draft Order
+  -> Manual Revision
   -> Validate
   -> Confirm
   -> Generate Customer Invoice and Vendor Bills
@@ -33,16 +53,31 @@ Original Order
 
 ---
 
-## 3. Business Behavior
+## 5. Amendment Chain
 
-The new Draft Order is copied from the original Order.
+Re-Invoice must preserve relationship to:
 
-Authorized users manually update the copied Order according to the amendment scenario.
-
-The Re-Invoice Order can itself be amended again, creating a longer amendment chain.
+- Original Order
+- Original Customer Invoice
+- Original Vendor Bills
+- Full Credit Note
+- New replacement Order
+- New Customer Invoice
+- New Vendor Bills
 
 ---
 
-## 4. Reporting
+## 6. Reporting
 
-Profitability reporting must consider the full amendment chain, not only the latest Order.
+Reporting must consider the full amendment chain.
+
+Reports should show original value, credit value, re-invoice value, and final net outcome.
+
+---
+
+## 7. Related Documents
+
+- BUS-004 Commercial Transaction
+- BUS-005 Order Management
+- BUS-008 Full Credit Note
+- ADR-003 Document-Based Amendment Strategy
