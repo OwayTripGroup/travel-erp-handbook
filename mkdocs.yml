@@ -51,6 +51,7 @@ nav:
   - Business:
       - Overview: 02-business/index.md
       - BUS-000 Travel ERP Business Overview: 02-business/BUS-000-travel-erp-business-overview.md
+      - BUS-001 Customer Management: 02-business/BUS-001-customer-management.md
   - Accounting:
       - Overview: 03-accounting/index.md
   - Integration:
