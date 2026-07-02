@@ -67,6 +67,9 @@ nav:
       - ACC-003 Currency and Exchange Rate Strategy: 03-accounting/ACC-003-currency-and-exchange-rate-strategy.md
   - Integration:
       - Overview: 04-integration/index.md
+      - INT-001 Odoo Integration: 04-integration/INT-001-odoo-integration.md
+      - INT-002 Source System Integration: 04-integration/INT-002-source-system-integration.md
+      - INT-003 Power BI and Reporting Integration: 04-integration/INT-003-power-bi-and-reporting-integration.md
   - Data:
       - Overview: 05-data/index.md
   - API:
