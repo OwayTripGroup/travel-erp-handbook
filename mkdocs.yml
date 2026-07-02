@@ -43,6 +43,7 @@ nav:
       - GOV-001 Documentation Standard: 00-governance/GOV-001-documentation-standard.md
   - Architecture:
       - Overview: 01-architecture/index.md
+      - ARC-000 Design Principles: 01-architecture/ARC-000-design-principles.md
   - Business:
       - Overview: 02-business/index.md
   - Accounting:
@@ -63,5 +64,6 @@ nav:
       - Overview: 10-adr/index.md
   - Reference:
       - Overview: 11-reference/index.md
+      - REF-001 Order Domain Discovery: 11-reference/REF-001-order-domain-discovery.md
   - Requirements:
       - Overview: 12-requirements/index.md
