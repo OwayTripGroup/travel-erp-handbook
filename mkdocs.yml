@@ -41,6 +41,9 @@ nav:
   - Governance:
       - Overview: 00-governance/index.md
       - GOV-001 Documentation Standard: 00-governance/GOV-001-documentation-standard.md
+      - GOV-002 Domain Dictionary: 00-governance/GOV-002-domain-dictionary.md
+      - GOV-003 Business Capability Map: 00-governance/GOV-003-business-capability-map.md
+      - GOV-004 Business Event Catalog: 00-governance/GOV-004-business-event-catalog.md
       - GOV-005 Business Rules Catalog: 00-governance/GOV-005-business-rules-catalog.md
   - Architecture:
       - Overview: 01-architecture/index.md
