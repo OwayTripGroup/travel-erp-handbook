@@ -83,6 +83,9 @@ nav:
       - API-004 Report and Download API: 06-api/API-004-report-and-download-api.md
   - Frontend:
       - Overview: 07-frontend/index.md
+      - FE-001 Frontend Architecture Overview: 07-frontend/FE-001-frontend-architecture-overview.md
+      - FE-002 Workflow UI Patterns: 07-frontend/FE-002-workflow-ui-patterns.md
+      - FE-003 Report and Download UX: 07-frontend/FE-003-report-and-download-ux.md
   - Operations:
       - Overview: 08-operations/index.md
       - OPS-001 Background Jobs and Sync Jobs: 08-operations/OPS-001-background-jobs-and-sync-jobs.md
