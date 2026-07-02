@@ -72,6 +72,9 @@ nav:
       - INT-003 Power BI and Reporting Integration: 04-integration/INT-003-power-bi-and-reporting-integration.md
   - Data:
       - Overview: 05-data/index.md
+      - DATA-001 Data Ownership Matrix: 05-data/DATA-001-data-ownership-matrix.md
+      - DATA-002 Audit Data Model: 05-data/DATA-002-audit-data-model.md
+      - DATA-003 Settings and Configuration Model: 05-data/DATA-003-settings-and-configuration-model.md
   - API:
       - Overview: 06-api/index.md
   - Frontend:
