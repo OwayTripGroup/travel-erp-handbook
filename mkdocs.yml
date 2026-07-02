@@ -78,6 +78,9 @@ nav:
       - Overview: 07-frontend/index.md
   - Operations:
       - Overview: 08-operations/index.md
+      - OPS-001 Background Jobs and Sync Jobs: 08-operations/OPS-001-background-jobs-and-sync-jobs.md
+      - OPS-002 Audit Trail and Activity Timeline: 08-operations/OPS-002-audit-trail-and-activity-timeline.md
+      - OPS-003 Notification and Alerting: 08-operations/OPS-003-notification-and-alerting.md
   - Standards:
       - Overview: 09-standards/index.md
   - ADR:
