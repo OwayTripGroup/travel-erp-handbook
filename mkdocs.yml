@@ -107,3 +107,10 @@ nav:
       - REF-001 Order Domain Discovery: 11-reference/REF-001-order-domain-discovery.md
   - Requirements:
       - Overview: 12-requirements/index.md
+  - Security:
+      - SEC-001 Organization Structure: 13-security/SEC-001-organization-structure.md
+      - SEC-002 Role-Based Access Control: 13-security/SEC-002-role-based-access-control.md
+      - SEC-003 Permission Matrix: 13-security/SEC-003-permission-matrix.md
+      - SEC-004 Approval Framework: 13-security/SEC-004-approval-framework.md
+      - SEC-005 Audit and Compliance: 13-security/SEC-005-audit-and-compliance.md
+      - SEC-006 Data Visibility Rules: 13-security/SEC-006-data-visibility-rules.md
