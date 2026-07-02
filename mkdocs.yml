@@ -1,5 +1,5 @@
 site_name: Travel ERP Enterprise Architecture Handbook
-site_description: Official architecture handbook for the Travel ERP System
+site_description: Official architecture handbook for the Travel MidOffice System
 site_author: ERP Architecture Team
 repo_name: OwayTripGroup/travel-erp-handbook
 repo_url: https://github.com/OwayTripGroup/travel-erp-handbook
@@ -52,6 +52,14 @@ nav:
       - Overview: 02-business/index.md
       - BUS-000 Travel ERP Business Overview: 02-business/BUS-000-travel-erp-business-overview.md
       - BUS-001 Customer Management: 02-business/BUS-001-customer-management.md
+      - BUS-002 Vendor Management: 02-business/BUS-002-vendor-management.md
+      - BUS-003 Product Management: 02-business/BUS-003-product-management.md
+      - BUS-004 Commercial Transaction: 02-business/BUS-004-commercial-transaction.md
+      - BUS-005 Order Management: 02-business/BUS-005-order-management.md
+      - BUS-006 Customer Invoice: 02-business/BUS-006-customer-invoice.md
+      - BUS-007 Vendor Bill: 02-business/BUS-007-vendor-bill.md
+      - BUS-008 Full Credit Note: 02-business/BUS-008-full-credit-note.md
+      - BUS-009 Re-Invoice: 02-business/BUS-009-re-invoice.md
   - Accounting:
       - Overview: 03-accounting/index.md
   - Integration:

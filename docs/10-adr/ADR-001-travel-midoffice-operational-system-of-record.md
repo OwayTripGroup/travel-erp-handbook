@@ -21,17 +21,7 @@ Source systems such as the Oway Travel Website, Oway Travel Mobile App, Amadeus,
 
 Commercial Transactions may originate from multiple channels.
 
-Examples:
-
-- Website
-- Mobile App
-- Sales Operation
-- Amadeus
-- Future partner systems
-
 Each source system may have its own workflow and status. However, Travel MidOffice requires one unified operational workflow for validation, confirmation, invoice generation, vendor bill generation, amendment, reporting, and audit.
-
-Without one operational system of record, ownership becomes fragmented and reporting becomes inconsistent.
 
 ---
 
@@ -51,36 +41,15 @@ This decision supports:
 
 ## 4. Consequences
 
-### Positive Consequences
+Positive consequences:
 
 - Travel MidOffice becomes the authoritative operational platform.
 - Source systems do not need to own downstream finance or amendment workflows.
 - Operational reporting can be centralized.
 - Odoo integration becomes more predictable.
 
-### Trade-offs
+Trade-offs:
 
 - Source system statuses must be mapped carefully into Travel MidOffice.
 - Integration boundaries must be clearly documented.
 - Duplicate ownership between source systems and Travel MidOffice must be avoided.
-
----
-
-## 5. Business Rules Introduced
-
-| Rule ID | Rule |
-|---|---|
-| BR-INT-001 | Travel MidOffice is the operational system of record. |
-| BR-INT-004 | Odoo shall not become the owner of operational workflow state. |
-
----
-
-## 6. Related Documents
-
-- GOV-002 Domain Dictionary
-- GOV-003 Business Capability Map
-- GOV-005 Business Rules Catalog
-- BUS-000 Travel ERP Business Overview
-- ARC-000 Design Principles
-- ADR-002 Odoo as Accounting System of Record
-- ADR-003 Document-Based Amendment Strategy

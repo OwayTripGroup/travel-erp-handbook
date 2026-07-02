@@ -14,23 +14,11 @@
 
 The Domain Dictionary defines the official vocabulary used throughout the Travel MidOffice knowledge base.
 
-It exists to establish one shared language across Product, Engineering, Operations, Sales, Finance, Management, QA, and integration partners.
-
-All architecture documents, workflow documents, API specifications, database designs, implementation plans, and test cases should use the terms defined here.
+It establishes one shared language across Product, Engineering, Operations, Sales, Finance, Management, QA, and integration partners.
 
 ---
 
-## 2. Terminology Principles
-
-- Business terminology takes precedence over technical terminology.
-- One business concept should have one official definition.
-- Database table names do not define business language.
-- Implementation names may differ from business concepts where necessary.
-- Deprecated or legacy terms should remain documented when they help explain historical context.
-
----
-
-## 3. Core Domain Terms
+## 2. Core Domain Terms
 
 ### Commercial Transaction
 
@@ -72,41 +60,7 @@ A Product Line may have its own vendor, selling price, cost, currency, exchange 
 
 ---
 
-## 4. Sales and Commercial Terms
-
-### Selling Price
-
-The amount charged to the Customer for a product line or Order.
-
-### Cost
-
-The amount payable to a Vendor for a product line or service.
-
-### Margin
-
-The difference between Selling Price and Cost.
-
-Margin may be analyzed as an amount or as a percentage.
-
-### Discount
-
-A reduction of Selling Price.
-
-Discounts may come from online promotions, campaigns, corporate pricing, manual adjustments, or order-level discount policies.
-
-### Sales Channel
-
-The source through which a Commercial Transaction originates.
-
-Examples include Oway Travel Website, Oway Travel Mobile App, Sales Operation, Amadeus, and future partner systems.
-
----
-
-## 5. Operational Terms
-
-### Draft
-
-The entry state of an Order in Travel MidOffice.
+## 3. Operational Terms
 
 ### Validation
 
@@ -117,10 +71,6 @@ Validation may include customer mapping, product completeness, vendor mapping, c
 ### Confirmation
 
 The operational decision that an Order is valid and ready for financial document generation.
-
-### Cancellation
-
-The process of stopping an Order before financial documents are generated, subject to permission and workflow rules.
 
 ### Amendment
 
@@ -134,7 +84,7 @@ The full relationship between the original Order, Full Credit Note, Re-Invoice O
 
 ---
 
-## 6. Financial Terms
+## 4. Financial Terms
 
 ### Customer Invoice
 
@@ -180,7 +130,7 @@ Accounting tax information configured by Finance in Odoo and synchronized into T
 
 ---
 
-## 7. Integration Terms
+## 5. Integration Terms
 
 ### Source System
 
@@ -200,10 +150,6 @@ The authoritative system for accounting data.
 
 Odoo is the Accounting System of Record.
 
-### Synchronization
-
-The controlled transfer of business documents or status information between systems.
-
 ### Sync Job
 
 A background process responsible for synchronizing data with an external system.
@@ -214,21 +160,15 @@ A response from an external system indicating processing outcome or status chang
 
 ---
 
-## 8. Reporting and Audit Terms
+## 6. Reporting and Audit Terms
 
 ### Business Event
 
 A meaningful business occurrence that changes system state or must be recorded for traceability.
 
-Examples include Order Created, Order Validated, Order Confirmed, Customer Invoice Generated, Vendor Bill Generated, Full Credit Note Created, and Re-Invoice Created.
-
 ### Audit Trail
 
 The chronological record of actions, changes, and business events related to a business object.
-
-### Timeline
-
-The ordered business history of a Commercial Transaction or Order.
 
 ### Profitability
 
@@ -236,22 +176,10 @@ The financial outcome of a Commercial Transaction, considering selling price, di
 
 ---
 
-## 9. Ownership
+## 7. Related Documents
 
-This dictionary is owned by the Enterprise Architecture Team.
-
-Any change to canonical terminology should be reviewed because terminology changes affect the full knowledge base, implementation, API naming, reporting, and user understanding.
-
----
-
-## 10. Related Documents
-
-- GOV-001 Documentation Standard
 - GOV-003 Business Capability Map
 - GOV-004 Business Event Catalog
 - GOV-005 Business Rules Catalog
 - BUS-000 Travel ERP Business Overview
 - ARC-000 Design Principles
-- ADR-001 Travel MidOffice as Operational System of Record
-- ADR-002 Odoo as Accounting System of Record
-- ADR-003 Document-Based Amendment Strategy

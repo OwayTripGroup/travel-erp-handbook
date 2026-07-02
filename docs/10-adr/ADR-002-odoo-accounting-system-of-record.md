@@ -23,8 +23,6 @@ Travel MidOffice generates operational financial documents such as Customer Invo
 
 These documents are synchronized to Odoo for accounting treatment.
 
-The system boundary must be clear because Travel MidOffice and Odoo serve different purposes.
-
 Travel MidOffice is optimized for travel operations. Odoo is optimized for accounting.
 
 ---
@@ -42,7 +40,7 @@ This decision supports:
 
 ---
 
-## 4. Responsibilities
+## 4. Responsibility Boundary
 
 | Area | Owner |
 |---|---|
@@ -57,43 +55,3 @@ This decision supports:
 | Accounts payable | Odoo |
 | Tax configuration | Odoo / Finance |
 | Payment and reconciliation | Odoo / Finance |
-
----
-
-## 5. Consequences
-
-### Positive Consequences
-
-- Finance can govern accounting in Odoo.
-- Travel MidOffice avoids becoming a duplicate accounting engine.
-- Operational teams can focus on travel workflows.
-- Integration contracts become explicit.
-
-### Trade-offs
-
-- Synchronization reliability becomes critical.
-- Odoo identifiers must be tracked in Travel MidOffice.
-- Tax and accounting master data must be synchronized or referenced correctly.
-- Error recovery and retry workflows are required.
-
----
-
-## 6. Business Rules Introduced
-
-| Rule ID | Rule |
-|---|---|
-| BR-INT-002 | Odoo is the accounting system. |
-| BR-TAX-001 | Tax configuration is owned by Finance and Odoo. |
-| BR-TAX-003 | MidOffice shall not become the accounting tax source of truth. |
-
----
-
-## 7. Related Documents
-
-- GOV-002 Domain Dictionary
-- GOV-005 Business Rules Catalog
-- BUS-000 Travel ERP Business Overview
-- ARC-000 Design Principles
-- ADR-001 Travel MidOffice as Operational System of Record
-- ADR-003 Document-Based Amendment Strategy
-- INT-001 Odoo Integration

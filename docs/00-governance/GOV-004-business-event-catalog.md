@@ -78,24 +78,3 @@ A business event is a meaningful business occurrence that changes state, creates
 | EVT-RPT-001 | Transaction Exported | Transaction data is exported for reporting or analytics. |
 | EVT-RPT-002 | Report Generated | A report is generated. |
 | EVT-RPT-003 | Report Downloaded | A user downloads a generated report. |
-
----
-
-## 8. Event Governance
-
-Events should be reviewed before being added to the catalog.
-
-Each event should have a clear business meaning, owner, producer, and consumer when used in implementation.
-
----
-
-## 9. Related Documents
-
-- GOV-002 Domain Dictionary
-- GOV-003 Business Capability Map
-- GOV-005 Business Rules Catalog
-- BUS-000 Travel ERP Business Overview
-- ARC-000 Design Principles
-- ADR-001 Travel MidOffice as Operational System of Record
-- ADR-002 Odoo as Accounting System of Record
-- ADR-003 Document-Based Amendment Strategy
