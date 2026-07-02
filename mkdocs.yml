@@ -1,0 +1,66 @@
+site_name: Travel ERP Enterprise Architecture Handbook
+site_description: Official architecture handbook for the Travel ERP System
+site_author: ERP Architecture Team
+repo_name: OwayTripGroup/travel-erp-handbook
+repo_url: https://github.com/OwayTripGroup/travel-erp-handbook
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+nav:
+  - Home: index.md
+  - Governance:
+      - Overview: 00-governance/index.md
+  - Architecture:
+      - Overview: 01-architecture/index.md
+  - Business:
+      - Overview: 02-business/index.md
+  - Accounting:
+      - Overview: 03-accounting/index.md
+  - Integration:
+      - Overview: 04-integration/index.md
+  - Data:
+      - Overview: 05-data/index.md
+  - API:
+      - Overview: 06-api/index.md
+  - Frontend:
+      - Overview: 07-frontend/index.md
+  - Operations:
+      - Overview: 08-operations/index.md
+  - Standards:
+      - Overview: 09-standards/index.md
+  - ADR:
+      - Overview: 10-adr/index.md
+  - Reference:
+      - Overview: 11-reference/index.md
+  - Requirements:
+      - Overview: 12-requirements/index.md
