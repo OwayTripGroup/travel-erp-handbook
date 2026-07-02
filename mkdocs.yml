@@ -77,6 +77,10 @@ nav:
       - DATA-003 Settings and Configuration Model: 05-data/DATA-003-settings-and-configuration-model.md
   - API:
       - Overview: 06-api/index.md
+      - API-001 API Architecture Overview: 06-api/API-001-api-architecture-overview.md
+      - API-002 Workflow Action API: 06-api/API-002-workflow-action-api.md
+      - API-003 Odoo Sync API: 06-api/API-003-odoo-sync-api.md
+      - API-004 Report and Download API: 06-api/API-004-report-and-download-api.md
   - Frontend:
       - Overview: 07-frontend/index.md
   - Operations:
