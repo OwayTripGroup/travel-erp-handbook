@@ -40,6 +40,7 @@ nav:
   - Home: index.md
   - Governance:
       - Overview: 00-governance/index.md
+      - GOV-001 Documentation Standard: 00-governance/GOV-001-documentation-standard.md
   - Architecture:
       - Overview: 01-architecture/index.md
   - Business:
