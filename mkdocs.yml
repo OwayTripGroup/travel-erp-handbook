@@ -62,6 +62,9 @@ nav:
       - BUS-009 Re-Invoice: 02-business/BUS-009-re-invoice.md
   - Accounting:
       - Overview: 03-accounting/index.md
+      - ACC-001 Accounting Lifecycle: 03-accounting/ACC-001-accounting-lifecycle.md
+      - ACC-002 Odoo Invoice and Vendor Bill Lifecycle: 03-accounting/ACC-002-odoo-invoice-and-vendor-bill-lifecycle.md
+      - ACC-003 Currency and Exchange Rate Strategy: 03-accounting/ACC-003-currency-and-exchange-rate-strategy.md
   - Integration:
       - Overview: 04-integration/index.md
   - Data:
