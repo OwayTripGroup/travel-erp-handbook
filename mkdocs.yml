@@ -46,6 +46,7 @@ nav:
       - ARC-000 Design Principles: 01-architecture/ARC-000-design-principles.md
   - Business:
       - Overview: 02-business/index.md
+      - BUS-000 Travel ERP Business Overview: 02-business/BUS-000-travel-erp-business-overview.md
   - Accounting:
       - Overview: 03-accounting/index.md
   - Integration:
